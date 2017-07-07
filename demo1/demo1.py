@@ -16,9 +16,9 @@ def a():
     print u'测试a'
 
 
-def testa():
+def tesa():
     a()
 
 
 if __name__ == '__main__':
-    testa()
+    tesa()
