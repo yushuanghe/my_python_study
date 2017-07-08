@@ -31,8 +31,8 @@ if __name__ == '__main__':
 
     print ("====")
 
-    i = raw_input("输入")
-    print "你好，", i
+    # i = raw_input("输入")
+    # print "你好，", i
 
     print ("i\'m \"ok\"")
     print ("\\\t\\")
@@ -79,3 +79,30 @@ if __name__ == '__main__':
 
     print
     print a
+
+    print (ord("A"))
+    print (chr(122))
+    print
+    # unicode编码
+    print u'大力出奇迹！'
+    # 把unicode转换为utf-8
+    print u'\u4e2d'.encode('utf-8')
+    # 把utf-8转换为unicode
+    print "大力出奇迹！".decode('utf-8')
+    print '\xe4\xb8\xad\xe6\x96\x87'.decode('utf-8')
+
+    list = ['大力', '二利', '三力']
+    print len(list)
+    print list[0]
+    print list[-1]
+    # print list[3]
+    list.append('四力')
+    print list[-1]
+    list.insert(0, '0力')
+    print list[0]
+    print len(list)
+    list.pop(-1)
+    print list[-1]
+
+    list2=['大力出奇迹！',111,True]
+
