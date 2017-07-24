@@ -104,5 +104,26 @@ if __name__ == '__main__':
     list.pop(-1)
     print list[-1]
 
-    list2=['大力出奇迹！',111,True]
+    list2 = [u'大力出奇迹！', 111, True]
 
+    list.extend(list2)
+    print list
+
+    # 元组
+    a = (1, 2)
+    print a
+    # 元组定义后不能修改
+    # a[1] = 'haha'
+    print a
+
+    a = 'haha dali'
+    b = a[2]
+    print a, b
+
+    a = {'大力': "111", '二力': "222", '三里': 333}
+    print a
+    print a['大力']
+
+    # 会去重
+    a = set([1, 2, 3, 3, 2, 1])
+    print a
