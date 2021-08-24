@@ -11,16 +11,16 @@
 
 
 def msg(a):
-    print a
+    print(a)
     return ('哈哈', 123, True)
 
 
 def handleText(x):
-    print 'text'
+    print('text')
 
 
 def handleHtml(x):
-    print 'html'
+    print('html')
 
 
 def action(t):
@@ -36,9 +36,9 @@ class A(object):
 
 if __name__ == '__main__':
     a, b, c = msg("大力出奇迹！")
-    print a, b, c
+    print(a, b, c)
 
     x = msg("大力出奇迹！")
-    print x, type(x)
+    print(x, type(x))
 
     action('text')('大力出奇迹！')

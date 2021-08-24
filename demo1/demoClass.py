@@ -36,6 +36,6 @@ class B(object):
 if __name__ == '__main__':
     a = A('大力', '出奇迹！')
     # 执行__str__
-    print a
+    print(a)
 
     b = B

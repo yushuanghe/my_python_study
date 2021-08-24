@@ -9,11 +9,11 @@
 @time:2017/06/23 00:41
 """
 
-print u'大力出奇迹！'
+print(u'大力出奇迹！')
 
 
 def a():
-    print u'测试a'
+    print(u'测试a')
 
 
 def tesa():

@@ -11,4 +11,4 @@
 
 import demo1
 
-print u'二力不一般！'
+print(u'二力不一般！')

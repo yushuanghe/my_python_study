@@ -22,23 +22,23 @@ class A(object):
 
 if __name__ == '__main__':
     a = dict(name="大力", age=20, ags=22)
-    print a['ags']
+    print(a['ags'])
 
     a = dict(name='大力', age=20)
     # print a['ags']
     try:
-        print a['ags']
+        print(a['ags'])
     except KeyError:
-        print '出错了！'
+        print('出错了！')
 
-    print
+    print()
     a = range(1, 10)
     try:
         a[8] = 100
     except IndexError:
-        print '出错了！'
+        print('出错了！')
     else:
-        print 'else'
+        print('else')
 
     # demoDef.action('aaa')('哈哈')
     d.action('aaa')('哈哈')
@@ -46,8 +46,8 @@ if __name__ == '__main__':
     from demoClass import A
 
     x = A('a', 'b')
-    print x
+    print(x)
 
-    print
-    print dir(d)
-    print help(d)
+    print()
+    print(dir(d))
+    print(help(d))

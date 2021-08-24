@@ -19,8 +19,8 @@ class A(object):
 
 
 if __name__ == '__main__':
-    print (100 + 200)
-    print ("====")
+    print(100 + 200)
+    print("====")
 
     # print absolute value of an integer:
     a = 100
@@ -29,101 +29,101 @@ if __name__ == '__main__':
     else:
         print(-a)
 
-    print ("====")
+    print("====")
 
     # i = raw_input("输入")
     # print "你好，", i
 
-    print ("i\'m \"ok\"")
-    print ("\\\t\\")
-    print ("\\\n\\")
+    print("i\'m \"ok\"")
+    print("\\\t\\")
+    print("\\\n\\")
     # r""默认里面的字符串不转意
-    print (r"\\\\\\\t")
-    print ('''
+    print(r"\\\\\\\t")
+    print('''
 大力出奇迹！
     阿诗丹顿
     东方闪电
     
     ''')
-    print (r'''
+    print(r'''
     大力出奇迹！
         阿诗丹顿
         东方闪电
 //////\\\\\\\\t\n\\\\\
         ''')
-    print (True)
-    print (False)
-    print (True and True)
-    print (False or True)
-    print (not True)
-    print (None)
+    print(True)
+    print(False)
+    print(True and True)
+    print(False or True)
+    print(not True)
+    print(None)
 
     a = 123
-    print a
+    print(a)
     a = "大力出奇迹！"
-    print a
+    print(a)
 
     x = 10
     x = x + 2
-    print x
+    print(x)
 
     a = 'ABC'
     b = a
     a = 'XYZ'
     print(b)
 
-    print 10.0 / 3
-    print 10 / 3
-    print 10.0 // 3
-    print 10 % 3
+    print(10.0 / 3)
+    print(10 / 3)
+    print(10.0 // 3)
+    print(10 % 3)
 
     print
-    print a
+    print(a)
 
-    print (ord("A"))
-    print (chr(122))
+    print(ord("A"))
+    print(chr(122))
     print
     # unicode编码
-    print u'大力出奇迹！'
+    print(u'大力出奇迹！')
     # 把unicode转换为utf-8
-    print u'\u4e2d'.encode('utf-8')
+    print(u'\u4e2d'.encode('utf-8'))
     # 把utf-8转换为unicode
-    print "大力出奇迹！".decode('utf-8')
-    print '\xe4\xb8\xad\xe6\x96\x87'.decode('utf-8')
+    # print("大力出奇迹！".decode('utf-8'))
+    # print('\xe4\xb8\xad\xe6\x96\x87'.decode('utf-8'))
 
     list = ['大力', '二利', '三力']
-    print len(list)
-    print list[0]
-    print list[-1]
+    print(len(list))
+    print(list[0])
+    print(list[-1])
     # print list[3]
     list.append('四力')
-    print list[-1]
+    print(list[-1])
     list.insert(0, '0力')
-    print list[0]
-    print len(list)
+    print(list[0])
+    print(len(list))
     list.pop(-1)
-    print list[-1]
+    print(list[-1])
 
     list2 = [u'大力出奇迹！', 111, True]
 
     list.extend(list2)
-    print list
+    print(list)
 
     # 元组
     a = (1, 2)
-    print a
+    print(a)
     # 元组定义后不能修改
     # a[1] = 'haha'
-    print a
+    print(a)
 
     a = 'haha dali'
     b = a[2]
-    print a, b
+    print(a, b)
 
     a = {'大力': "111", '二力': "222", '三里': 333}
-    print a
-    print a['大力']
+    print(a)
+    print(a['大力'])
 
     # 会去重
-    a = set([1, 2, 3, 3, 2, 1])
-    print a
+    a = {1, 2, 3, 3, 2, 1}
+    print(a)
