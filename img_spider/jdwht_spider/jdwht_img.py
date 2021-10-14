@@ -14,6 +14,7 @@ import os
 import sys
 import time
 from urllib import request
+
 import requests
 from lxml import etree
 
@@ -44,29 +45,34 @@ def get_img_from_detail(base_url, page_id, img_path, img_name_prefix):
         print('%s下载完成' % img_name)
 
 
-input_url = sys.argv[1]
-# 通用的url模板(不能修改)
-base_url = input_url.split('.html')[0] + '{page_id}.html'
-req_url = base_url.format(page_id='')
-tree = get_html_tree(req_url)
+def execute_spider(req_url, base_url):
+    tree = get_html_tree(req_url)
 
-dir_name = tree.xpath('//meta[@name="keywords"]/@content')[0]
-base_path = 'D:\data\自定义'
-img_path = base_path + '\\' + dir_name
-print(img_path)
+    dir_name = tree.xpath('//meta[@name="keywords"]/@content')[0]
+    base_path = 'D:\data\自定义'
+    img_path = base_path + '\\' + dir_name
+    print(img_path)
 
-if not os.path.exists(img_path):
-    os.mkdir(img_path)
+    if not os.path.exists(img_path):
+        os.mkdir(img_path)
 
-get_img_from_detail(base_url, '', img_path, dir_name)
+    get_img_from_detail(base_url, '', img_path, dir_name)
 
-page_list = tree.xpath('//div[@class="pagelist"]//a/@href')
-page_list = set(page_list)
-print(page_list)
-print('一共%d张图片' % (len(page_list) + 1))
+    page_list = tree.xpath('//div[@class="pagelist"]//a/@href')
+    page_list = set(page_list)
+    print(page_list)
+    print('一共%d张图片' % (len(page_list) + 1))
 
-for page in page_list:
-    page_id = '_' + page.split('_')[1].split('.')[0]
-    get_img_from_detail(base_url, page_id, img_path, dir_name)
+    for page in page_list:
+        page_id = '_' + page.split('_')[1].split('.')[0]
+        get_img_from_detail(base_url, page_id, img_path, dir_name)
 
-print('done!')
+    print('spider detail done!')
+
+
+if __name__ == '__main__':
+    input_url = sys.argv[1]
+    # 通用的url模板(不能修改)
+    base_url = input_url.split('.html')[0] + '{page_id}.html'
+    req_url = base_url.format(page_id='')
+    execute_spider(req_url, base_url)
