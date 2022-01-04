@@ -48,7 +48,7 @@ def get_img_from_detail(base_url, page_id, img_path, img_name_prefix):
 def execute_spider(req_url, base_url):
     tree = get_html_tree(req_url)
 
-    dir_name = tree.xpath('//meta[@name="keywords"]/@content')[0]
+    dir_name = tree.xpath('//meta[@name="keywords"]/@content')[0].replace('/', '-')
     base_path = 'D:\data\自定义'
     img_path = base_path + '\\' + dir_name
     print(img_path)
